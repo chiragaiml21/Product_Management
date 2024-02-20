@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+
+<form action="/add-product" method="POST">
+    <label for="name">Product Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="imageUrl">Image URL:</label><br>
+    <input type="text" id="imageUrl" name="imageUrl"><br>
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price"><br><br>
+    <button type="submit">Add Product</button>
+</form>
+
+<h2>Products:</h2>
+<ul>
+    {{#each products}}
+        <li><a href="/product/{{@index}}">{{ this.name }}</a></li>
+    {{/each}}
+</ul>

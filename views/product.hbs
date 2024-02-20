@@ -1,0 +1,7 @@
+<h1>{{ product.name }}</h1>
+<img src="{{ product.imageUrl }}" alt="{{ product.name }}" width="400px">
+<p>Price: ${{ product.price }}</p>
+<a href="/product/{{ id }}/edit">Edit</a>
+<form action="/product/{{ id }}/delete" method="POST">
+    <button type="submit">Delete</button>
+</form>
